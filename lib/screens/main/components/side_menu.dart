@@ -8,53 +8,89 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
-        children: [
-          DrawerHeader(
-            child: Image.asset("assets/images/logo.png"),
-          ),
-          DrawerListTile(
-            title: "Dashboard",
-            svgSrc: "assets/icons/menu_dashbord.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Transaction",
-            svgSrc: "assets/icons/menu_tran.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Task",
-            svgSrc: "assets/icons/menu_task.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Documents",
-            svgSrc: "assets/icons/menu_doc.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Store",
-            svgSrc: "assets/icons/menu_store.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Notification",
-            svgSrc: "assets/icons/menu_notification.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Profile",
-            svgSrc: "assets/icons/menu_profile.svg",
-            press: () {},
-          ),
-          DrawerListTile(
-            title: "Settings",
-            svgSrc: "assets/icons/menu_setting.svg",
-            press: () {},
-          ),
-        ],
+    return Container(
+      color: Colors.blueGrey[500],
+      width: 200,
+      child: Drawer(
+        child: ListView(
+          // padding: EdgeInsets.only(top: 160),
+          children: [
+            // DrawerHeader(
+            //   child: Image.asset("assets/images/logo.png"),
+            // ),
+            DrawerListTile(
+              title: "Main Dashboard",
+              svgSrc: "assets/icons/menu_dashbord.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Economy",
+              svgSrc: "assets/icons/menu_tran.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Living",
+              svgSrc: "assets/icons/menu_task.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Environment",
+              svgSrc: "assets/icons/menu_doc.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "People",
+              svgSrc: "assets/icons/menu_store.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Government",
+              svgSrc: "assets/icons/menu_notification.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Mobility",
+              svgSrc: "assets/icons/menu_profile.svg",
+              press: () {},
+            ),
+            DrawerListTile(
+              title: "Digital Infrastructure",
+              svgSrc: "assets/icons/menu_setting.svg",
+              press: () {},
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 40,
+              ),
+              child: DrawerListTile(
+                title: "User Management",
+                svgSrc: "assets/icons/menu_setting.svg",
+                press: () {},
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 10,
+              ),
+              child: DrawerListTile(
+                title: "Dashboard Management",
+                svgSrc: "assets/icons/menu_setting.svg",
+                press: () {},
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 10,
+              ),
+              child: DrawerListTile(
+                title: "Learn more",
+                svgSrc: "assets/icons/menu_setting.svg",
+                press: () {},
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -75,16 +111,18 @@ class DrawerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      // tileColor: Color(0xff2a384b),
+      // selectedTileColor: Colors.white,
       onTap: press,
       horizontalTitleGap: 0.0,
       leading: SvgPicture.asset(
         svgSrc,
         color: Colors.white54,
-        height: 16,
+        height: 18,
       ),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white54),
+        style: TextStyle(color: Color(0xff1c293b), fontSize: 12),
       ),
     );
   }
