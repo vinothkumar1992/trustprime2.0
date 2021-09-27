@@ -31,48 +31,63 @@ class Header extends StatelessWidget {
             ),
           if (!Responsive.isMobile(context))
             Image.asset(
-              'assets/images/kiwitech.png',
+              'assets/images/trust.png',
               height: 70,
               // style: Theme.of(context).textTheme.headline6,
             ),
-          Spacer(flex: Responsive.isDesktop(context) ? 10 : 1),
-          Image.asset(
-            'assets/images/trust.png',
-            height: 70,
-            // style: Theme.of(context).textTheme.headline6,
+          // Spacer(flex: Responsive.isDesktop(context) ? 1 : 1),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Image.asset(
+              'assets/images/arms_malaka.png',
+              height: 60,
+              // style: Theme.of(context).textTheme.headline6,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 40),
+            child: Text('Majlis Bandaraya Melaka Bersejarah'),
           ),
           if (!Responsive.isMobile(context))
-            Spacer(flex: Responsive.isDesktop(context) ? 4 : 1),
+            // Spacer(flex: Responsive.isDesktop(context) ? 1 : 1),
+            Expanded(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text('M B M B',
+                        style: TextStyle(color: Colors.green, fontSize: 24)),
+                  ),
+                  Text(
+                    "SMart & Low Carbon City",
+                    style: TextStyle(color: Colors.green, fontSize: 12),
+                  )
+                ],
+              ),
+            ),
+          // Container(
+          //   width: 1,
+          //   height: 40,
+          //   color: Colors.grey,
+          // ),
           Expanded(
-            child: Icon(
-              Icons.notifications,
-              color: Colors.lightBlue,
-              size: 25,
+            child: Image.asset(
+              'assets/images/malaka_bandaraya.png',
+              height: 60,
+              // style: Theme.of(context).textTheme.headline6,
             ),
           ),
-          Container(
-            width: 1,
-            height: 40,
-            color: Colors.grey,
-          ),
-          Expanded(
-            child: Icon(
-              Icons.email,
-              color: Colors.lightBlue,
-              size: 25,
-            ),
-          ),
-          Container(
-            width: 1,
-            height: 40,
-            color: Colors.grey,
-          ),
-          ChangeLanguage(),
-          Container(
-            width: 1,
-            height: 40,
-            color: Colors.grey,
-          ),
+          // Container(
+          //   width: 1,
+          //   height: 40,
+          //   color: Colors.grey,
+          // ),
+          // ChangeLanguage(),
+          // Container(
+          //   width: 1,
+          //   height: 40,
+          //   color: Colors.grey,
+          // ),
           ProfileCard()
         ],
       ),

@@ -14,10 +14,7 @@ class SideMenu extends StatelessWidget {
       child: Drawer(
         child: ListView(
           // padding: EdgeInsets.only(top: 160),
-          children: [
-            // DrawerHeader(
-            //   child: Image.asset("assets/images/logo.png"),
-            // ),
+          children: ListTile.divideTiles(context: context, tiles: [
             DrawerListTile(
               title: "Main Dashboard",
               svgSrc: "assets/icons/menu_dashbord.svg",
@@ -58,7 +55,6 @@ class SideMenu extends StatelessWidget {
               svgSrc: "assets/icons/menu_setting.svg",
               press: () {},
             ),
-
             Padding(
               padding: const EdgeInsets.only(
                 top: 40,
@@ -89,7 +85,97 @@ class SideMenu extends StatelessWidget {
                 press: () {},
               ),
             )
-          ],
+            // ListTile(
+            //   title: Text('Horse'),
+            // ),
+            // ListTile(
+            //   title: Text('Cow'),
+            // ),
+            // ListTile(
+            //   title: Text('Camel'),
+            // ),
+            // ListTile(
+            //   title: Text('Sheep'),
+            // ),
+            // ListTile(
+            //   title: Text('Goat'),
+            // ),
+          ]).toList(),
+          // DrawerHeader(
+          //   child: Image.asset("assets/images/logo.png"),
+          // ),
+          // DrawerListTile(
+          //   title: "Main Dashboard",
+          //   svgSrc: "assets/icons/menu_dashbord.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Economy",
+          //   svgSrc: "assets/icons/menu_tran.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Living",
+          //   svgSrc: "assets/icons/menu_task.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Environment",
+          //   svgSrc: "assets/icons/menu_doc.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "People",
+          //   svgSrc: "assets/icons/menu_store.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Government",
+          //   svgSrc: "assets/icons/menu_notification.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Mobility",
+          //   svgSrc: "assets/icons/menu_profile.svg",
+          //   press: () {},
+          // ),
+          // DrawerListTile(
+          //   title: "Digital Infrastructure",
+          //   svgSrc: "assets/icons/menu_setting.svg",
+          //   press: () {},
+          // ),
+
+          // Padding(
+          //   padding: const EdgeInsets.only(
+          //     top: 40,
+          //   ),
+          //   child: DrawerListTile(
+          //     title: "User Management",
+          //     svgSrc: "assets/icons/menu_setting.svg",
+          //     press: () {},
+          //   ),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.only(
+          //     top: 10,
+          //   ),
+          //   child: DrawerListTile(
+          //     title: "Dashboard Management",
+          //     svgSrc: "assets/icons/menu_setting.svg",
+          //     press: () {},
+          //   ),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.only(
+          //     top: 10,
+          //   ),
+          //   child: DrawerListTile(
+          //     title: "Learn more",
+          //     svgSrc: "assets/icons/menu_setting.svg",
+          //     press: () {},
+          //   ),
+          // )
+          // ],
         ),
       ),
     );
@@ -122,7 +208,7 @@ class DrawerListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: TextStyle(color: Color(0xff1c293b), fontSize: 12),
+        style: TextStyle(color: Colors.blueGrey[100], fontSize: 12),
       ),
     );
   }

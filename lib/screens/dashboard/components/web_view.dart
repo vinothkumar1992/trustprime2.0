@@ -18,7 +18,7 @@ class Iframe extends StatelessWidget {
     final setHeight = MediaQuery.of(context).size.height;
     final setWidth = MediaQuery.of(context).size.width;
     return Container(
-        width: setWidth,
+        width: setWidth - 400,
         height: setHeight - 70,
         child: HtmlElementView(viewType: 'iframe'));
   }

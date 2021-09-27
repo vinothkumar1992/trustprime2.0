@@ -3,6 +3,8 @@ import 'package:admin/responsive.dart';
 import 'package:admin/screens/dashboard/components/header.dart';
 import 'package:admin/screens/dashboard/components/web_view.dart';
 import 'package:admin/screens/dashboard/dashboard_screen.dart';
+import 'package:admin/screens/main/components/add_dashboard.dart';
+import 'package:admin/screens/main/components/sub_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -43,24 +45,31 @@ class MainScreen extends StatelessWidget {
               //   ),
               // ),
               // //
-              // Align(
-              //   alignment: Alignment.topLeft,
-              //   child: Container(
-              //     // margin: EdgeInsets.only(top: 70),
-              //     // color: Colors.black,
-              //     // color: Color(0xff2a384b),
-              //     // decoration: BoxDecoration(color: Color(0xff1c293b)),
-              //     // width: 200,
-              //     height: setHeight - 70,
-              //     child: Expanded(
-              //         child: Row(
-              //       children: [SideMenu(), WebViewClass()],
-              //     )),
-              //   ),
-              // ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  // margin: EdgeInsets.only(top: 70),
+                  // color: Colors.black,
+                  // color: Color(0xff2a384b),
+                  // decoration: BoxDecoration(color: Color(0xff1c293b)),
+                  // width: 200,
+                  height: setHeight - 70,
+                  child: Expanded(
+                      child: Row(
+                    children: [
+                      SideMenu(),
+                      // Iframe(),
+                      // Spacer(flex: 1),
+                      AddDashboard(),
+                      // Spacer(flex: 1),
+                      SubMenu()
+                    ],
+                  )),
+                ),
+              ),
 
               // DashboardScreen(),
-              Iframe()
+              // Iframe()
               // Container(height: 500, width: 600, child: WebViewClass())
             ],
           ),
